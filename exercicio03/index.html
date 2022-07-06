@@ -1,0 +1,54 @@
+<!--
+    NESTE CÓDIGO O OBJETIVO FOI, ENCONTRAR A DIV FILHO-DO-FILHO, E DEPOIS ENCONTRAR
+    QUAL DAS DIV FILHO-DO-FILHO TINHAM O ANIMAR. ASSIM QUE ENCONTRADO, USAMOS UMA
+    FUNÇÃO DO JQUERY PARA REALIZAR UMA ANIMAÇÃO, DIMINUINDO O TAMANHO DO QUADRADO
+    RESPECTIVO A DIV EM UM TEMPO DE 3 SEGUNDOS.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercicio 03</title>
+    <style type="text/css">
+        .filho {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pai">
+        <div class="filho">
+            <div class="filho-do-filho"></div>
+        </div>
+        <div class="filho">
+            <div class="filho-do-filho animar"></div>
+        </div>
+        <div class="filho"></div>
+        <div class="filho"></div>
+        <div class="filho"></div>
+        <div class="filho"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(function(){
+        
+        $('.pai .filho').each(function () {
+            var obj = $(this).find('.filho-do-filho');
+            if (obj.length > 0) {
+                if (obj.hasClass('animar')){
+                    $(this).animate({width:'100px'},3000, function(){
+                        console.log("Terminamos nossa lógica!!");
+                    })
+                }
+            }
+        })
+    })     
+    </script>
+</body>
+
+</html>
