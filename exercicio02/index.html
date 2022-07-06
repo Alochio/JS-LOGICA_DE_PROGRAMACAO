@@ -1,0 +1,47 @@
+<!--
+	NESTE CÓDIGO A IDÉIA FOI CRIAR QUADRADOS NA TELA, ONDE DE ACORDO COM SUA POSIÇÃO
+	O MESMO RECEBE UMA COR, SE O QUADRADO ESTIVER EM UMA POSIÇÃO PARM RECEBE A COR AZUL
+	CASO ESTEJA EM UMA POSIÇÃO IMPAR, RECEBE A COR VERMELHA.
+	FOI UTILIZADO O JQUERY PARA AUXILIAR NESSE CÓDIGO.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercicio 02</title>
+	<style type="text/css">
+		.filho{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="pai">
+		<div class="filho"></div>
+		<div class="filho"></div>
+		<div class="filho"></div>
+		<div class="filho"></div>
+		<div class="filho"></div>
+		<div class="filho"></div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		var index = 0;
+		$('.pai .filho').each(function(){
+			if(index%2 == 1){
+				$(this).css('background','red');
+			}
+			else{
+				$(this).css('background','blue');
+			}
+			index++;
+		})
+	})
+</script>
+</body>
+</html>
