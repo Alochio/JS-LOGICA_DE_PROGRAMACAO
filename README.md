@@ -1,3 +1,3 @@
-# Logica-de-Programacao-em-JS
+# Lógica de Programação em JS
 
-Neste repositório, se encontram códigos propostos pela Danki Code no curso de Lógica de Programação, na parte de JavaScript.
+Neste repositório, se encontram códigos propostos pela Danki Code no curso de Lógica de Programação, no módulo de JavaScript.
